@@ -27,7 +27,6 @@ class Bank:
         else: 
             print("Invalid account number.")
 
-
     def transfer(self, from_account, to_account, amount):
         account1 = self.find_account(from_account)
         account2 = self.find_account(to_account)
@@ -37,7 +36,15 @@ class Bank:
         else:
             print("Invalid account numbers.")
 
+    def statement(self, account_num):
+        account = self.find_account(account_num)
+        if account:
+            account.print_statement()
+        else:
+            print("Invalid account number.")
+
     
+
     # Helper function to generate random unique account number
     def generate_account_num(self):
         while True:
@@ -51,16 +58,3 @@ class Bank:
             if account.account_num == account_num:
                 return account
         return None
-
-
-# create_account() - creates a new account.
-
-# deposit() - deposits an amount into an account with an account number
-
-# withdraw() - removes an amount from an account with an account number
-
-# transfer() - withdraws an amount from an account with an account number
-
-#  and deposits the same amount to an account with another number.
-
-# statement() - prints an statement for an account with an account number.
