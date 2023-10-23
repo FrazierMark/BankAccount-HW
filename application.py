@@ -1,6 +1,8 @@
-from bankAccount import BankAccount
+'''This is the main application file for the Bank Account homework assignment.'''
+from bank_account import Bank_Account
 
 def application():
+    '''Main application function'''
     print("\nWelcome to the bank!")
     while True:
         print("\nWhat would you like to do?")
@@ -15,7 +17,7 @@ def application():
             account_num = input("What is your account number? ")
             balance = input("What is your balance? ")
             checking_or_savings = input("Is this a checking or savings account? ")
-            account = BankAccount(name, int(account_num), int(balance), checking_or_savings)
+            account = Bank_Account(name, int(account_num), int(balance), checking_or_savings)
             print("Account created!")
 
         elif choice == "2":
@@ -33,7 +35,7 @@ def application():
                 print("Deposit successful!")
             else:
                 print("Invalid account number.")
-                
+
         elif choice == "4":
             verify_account_num = input("What is your account number? ")
             amount = input("How much would you like to withdraw? ")
@@ -48,6 +50,5 @@ def application():
             break
         else:
             print("Invalid choice. Try again.")
-
 
 application()
