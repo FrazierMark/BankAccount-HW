@@ -1,4 +1,4 @@
-from BankAccount import bankAccount
+from bankAccount import BankAccount
 
 def application():
     print("\nWelcome to the bank!")
